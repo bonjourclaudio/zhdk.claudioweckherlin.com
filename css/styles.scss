@@ -305,6 +305,7 @@ body {
 .footer {
     height: 5vh;
     background-color: $primary;
+
     @include devices(mobile) {
         height: 10vh;
     }
@@ -322,9 +323,16 @@ body {
             align-items: center;
         }
 
+        div {
+            @include devices(mobile) {
+                margin-bottom: 1vh;
+            }
+        }
+
         @include devices(mobile) {
             display: flex;
             flex-direction: column;
+            margin-top: 2vh;
         }
     }
 
