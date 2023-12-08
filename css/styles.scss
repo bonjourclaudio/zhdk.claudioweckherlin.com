@@ -7,6 +7,20 @@
     font-style: normal;
 }
 
+@mixin devices($breakpoint) {
+    @if $breakpoint == tablet {
+        @media only screen and (max-width: 680px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == mobile {
+        @media only screen and (max-width: 481px) {
+            @content;
+        }
+    }
+}
+
 $primary: black;
 $secondary: white;
 $accent: #eeff2f;
@@ -18,6 +32,14 @@ $accent: #eeff2f;
 }
 h1 {
     font-size: 10rem;
+
+    @include devices(tablet) {
+        font-size: 7rem;
+    }
+
+    @include devices(mobile) {
+        font-size: 3.5rem;
+    }
 }
 
 h2 {
@@ -74,6 +96,10 @@ body {
     position: sticky;
     position: -webkit-sticky;
 
+    @include devices(mobile) {
+        font-size: 1rem;
+    }
+
     .nav-container {
         height: 100%;
         width: 100%;
@@ -122,6 +148,7 @@ body {
 
         &__heading {
             position: relative;
+            display: flex;
 
             h1 {
                 font-style: italic;
@@ -135,6 +162,11 @@ body {
                 justify-content: center;
                 align-items: center;
 
+                @include devices(mobile) {
+                    flex-direction: column;
+                    align-items: start;
+                }
+
                 &__el {
                     margin: 10px;
                     padding-left: 8px;
@@ -145,6 +177,11 @@ body {
                     color: $secondary;
                     border-radius: 20px;
                     cursor: pointer;
+
+                    @include devices(mobile) {
+                        margin: 0;
+                        margin-bottom: 1vh;
+                    }
 
                     &:hover {
                         background: none;
@@ -187,12 +224,22 @@ body {
             "title title media media"
             "description . media media"
             ". . media media";
+
+        @include devices(mobile) {
+            margin-top: 10vh;
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     .title {
         grid-area: title;
         h2 {
             font-size: 8rem;
+
+            @include devices(mobile) {
+                font-size: 4rem;
+            }
         }
     }
 
