@@ -345,6 +345,10 @@ body {
 
     .footer-name {
         grid-area: name;
+
+        @include devices(mobile) {
+            margin-bottom: 2vh;
+        }
     }
 
     .footer-insta {
