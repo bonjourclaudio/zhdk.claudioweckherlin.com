@@ -271,6 +271,9 @@ body {
 
             .gsehundgseh {
                 width: 200%;
+                @include devices(mobile) {
+                    width: 100%;
+                }
             }
         }
     }
