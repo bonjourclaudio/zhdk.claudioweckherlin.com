@@ -110,6 +110,8 @@ body {
     position: sticky;
     position: -webkit-sticky;
 
+    font-weight: bolder;
+
     &.project-specific {
         color: $accent;
     }
