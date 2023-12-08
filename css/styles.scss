@@ -333,7 +333,7 @@ body {
     }
 
     @include devices(mobile) {
-        height: 10vh;
+        height: 20vh;
     }
 
     &__container {
