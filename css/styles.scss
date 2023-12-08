@@ -332,12 +332,15 @@ body {
         @include devices(mobile) {
             display: flex;
             flex-direction: column;
-            margin-top: 2vh;
         }
     }
 
     .footer-title {
         grid-area: title;
+
+        @include devices(mobile) {
+            margin-top: 2vh;
+        }
     }
 
     .footer-name {
