@@ -304,6 +304,9 @@ body {
 .footer {
     height: 5vh;
     background-color: $primary;
+    @include devices(mobile) {
+        height: 10vh;
+    }
 
     &__container {
         color: $accent;
@@ -316,6 +319,11 @@ body {
         > * {
             display: flex;
             align-items: center;
+        }
+
+        @include devices(mobile) {
+            display: flex;
+            flex-direction: column;
         }
     }
 
