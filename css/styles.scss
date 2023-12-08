@@ -117,6 +117,7 @@ body {
     @include devices(mobile) {
         font-size: 1rem;
         margin-bottom: 2vh;
+        height: 10vh;
     }
 
     .nav-container {
@@ -184,6 +185,7 @@ body {
                 @include devices(mobile) {
                     flex-direction: column;
                     align-items: start;
+                    width: 80vw;
                 }
 
                 &__el {
@@ -386,7 +388,8 @@ body {
 // ############################
 .project-overview {
     .project-description {
-        height: 100vh;
+        height: auto;
+        min-height: 50vh;
 
         display: grid;
         grid-template-columns: 50% 25% 25%;
@@ -395,10 +398,9 @@ body {
 
         font-size: 1.5rem;
 
-        border-top: 1px solid $secondary;
-
         div {
-            margin-top: 2rem;
+            border-top: 1px solid $secondary;
+            padding-top: 2rem;
         }
 
         @include devices(mobile) {
@@ -412,6 +414,7 @@ body {
 
         .text {
             grid-area: text;
+            min-height: 40vh;
         }
     }
 }
@@ -432,5 +435,25 @@ body {
         }
 
         margin-bottom: 20vh;
+    }
+
+    .project-description {
+        grid-template-areas:
+            "desc text text"
+            "model-title model model";
+
+        .model-title {
+            grid-area: model-title;
+        }
+
+        .model {
+            grid-area: model;
+            height: 40vh;
+
+            .xtract-model {
+                width: 100%;
+                height: 100%;
+            }
+        }
     }
 }
