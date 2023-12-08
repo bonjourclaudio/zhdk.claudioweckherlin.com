@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claudio Weckherlin | Interaction Design 2024 - ZHdK</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <!-- Import the component -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+
+</head>
+
+<body>
+    <!-- %%%%% 3d Model %%%%% -->
+    <!-- Always positioned in fixed center -->
+    <div class="model-container">
+        <model-viewer id="typeModel" alt="3d Type portfolio" camera-orbit="calc(-1.5rad + env(window-scroll-y) * 4rad)
+        calc(0deg + env(window-scroll-y) * 180deg)
+        calc(3m - env(window-scroll-y) * 1.5m)" src="assets/type.glb"></model-viewer>
+    </div>
+
+    <!-- %%%%% Navigation %%%%% -->
+    <div class="nav">
+        <div class="nav-container">
+            <div class="nav-container__left nav-section">
+                <p>Interaction Design</p>
+            </div>
+            <div class="nav-container__center nav-section">
+                <p>ZHdK</p>
+            </div>
+            <div class="nav-container__right nav-section">
+                <a href="/about">Claudio Weckherlin</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- %%%%% Home Section %%%%% -->
+    <div class="section home">
+        <div class="home__container">
+            <div class="home__container__heading">
+                <!-- Main Title-->
+                <h1>Portfolio</h1>
+            </div>
+            <div class="home__container__toc">
+                <!-- Table of Contents-->
+                <div class="toc-container">
+                    <div class="toc-container__el" onclick="scrollToHash('#xtract')">
+                        <a href="#xtract">1. xtract.</a>
+                    </div>
+                    <div class="toc-container__el" onclick="scrollToHash('#mirror')">
+                        <a href="#mirror">2. mirror</a>
+                    </div>
+                    <div class="toc-container__el" onclick="scrollToHash('#gsehundgseh')">
+                        <a href="#gsehundgseh">3. gseh+gseh</a>
+                    </div>
+                    <div class="toc-container__el" onclick="scrollToHash('#coffee')">
+                        <a href="#coffee">4. coffee</a>
+                    </div>
+                    <div class="toc-container__el" onclick="scrollToHash('#graphicdesign')">
+                        <a href="#graphicdesign">5. graphic design</a>
+                    </div>
+                    <div class="toc-container__el" onclick="scrollToHash('#sketches')">
+                        <a href="#sketches">6. sketches</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section intro"></div>
+
+    <!-- ######################## -->
+    <!-- %%%%% Project Section %%%%% -->
+    <div class="projects">
+
+        <div id="xtract" class="projects__element xtract">
+            <div class="project-content">
+                <div class="title">
+                    <h2>xtract.</h2>
+                </div>
+                <div class="number">
+                    <h2>01</h2>
+                </div>
+                <div class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quibusdam iste illum, atque minima
+                    vero a, dolorem reprehenderit voluptate fuga quos porro quae optio asperiores unde iusto tempora
+                    maiores nam.
+                </div>
+                <div class="media">
+                    <div class="media__container">
+                        <div class="media-elem">
+                            <img src="./assets/thumbnails/xtract.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="mirror" class="projects__element mirror">
+            <div class="project-content">
+                <div class="title">
+                    <h2>dynamic mirror project</h2>
+                </div>
+                <div class="number">
+                    <h2>02</h2>
+                </div>
+                <div class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quibusdam iste illum, atque minima
+                    vero a, dolorem reprehenderit voluptate fuga quos porro quae optio asperiores unde iusto tempora
+                    maiores nam.
+                </div>
+                <div class="media">
+                    <div class="media__container">
+                        <div class="media-elem">
+                            <img src="./assets/thumbnails/mirror.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="gsehundgseh" class="projects__element gsehundgseh">
+            <div class="project-content">
+                <div class="title">
+                    <h2>gseh+gseh</h2>
+                </div>
+                <div class="number">
+                    <h2>03</h2>
+                </div>
+                <div class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quibusdam iste illum, atque minima
+                    vero a, dolorem reprehenderit voluptate fuga quos porro quae optio asperiores unde iusto tempora
+                    maiores nam.
+                </div>
+                <div class="media">
+                    <div class="media__container">
+                        <div class="media-elem gsehundgseh">
+                            <img src="./assets/thumbnails/gsehundgseh.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="coffee" class="projects__element coffee">
+            <div class="project-content">
+                <div class="title">
+                    <h2>coffee</h2>
+                </div>
+                <div class="number">
+                    <h2>04</h2>
+                </div>
+                <div class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quibusdam iste illum, atque minima
+                    vero a, dolorem reprehenderit voluptate fuga quos porro quae optio asperiores unde iusto tempora
+                    maiores nam.
+                </div>
+                <div class="media">
+                    <div class="media__container">
+                        <div class="media-elem">
+                            <img src="./assets/thumbnails/coffee.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="graphicdesign" class="projects__element graphicdesign">
+            <div class="project-content">
+                <div class="title">
+                    <h2>graphic design</h2>
+                </div>
+                <div class="number">
+                    <h2>05</h2>
+                </div>
+                <div class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quibusdam iste illum, atque minima
+                    vero a, dolorem reprehenderit voluptate fuga quos porro quae optio asperiores unde iusto tempora
+                    maiores nam.
+                </div>
+                <div class="media">
+                    <div class="media__container">
+                        <div class="media-elem">
+                            <img src="./assets/thumbnails/graphicdesign.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="sketches" class="projects__element sketches">
+            <div class="project-content">
+                <div class="title">
+                    <h2>sketches</h2>
+                </div>
+                <div class="number">
+                    <h2>06</h2>
+                </div>
+                <div class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quibusdam iste illum, atque minima
+                    vero a, dolorem reprehenderit voluptate fuga quos porro quae optio asperiores unde iusto tempora
+                    maiores nam.
+                </div>
+                <div class="media">
+                    <div class="media__container">
+                        <div class="media-elem">
+                            <img src="./assets/thumbnails/sketches.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ######################## -->
+    <!-- %%%%% Outro %%%%% -->
+    <div class="section outro"></div>
+
+    <!-- ######################## -->
+    <!-- %%%%% Footer %%%%% -->
+    <div class="footer">
+        <div class="footer__container">
+            <div class="footer-title">
+                <p>Interaction Design 2024</p>
+            </div>
+            <div class="footer-insta">
+                <a href="https://instagram.com/bonjourclaudio">@bonjourclaudio</a>
+            </div>
+            <div class="footer-name">Claudio Weckherlin</div>
+        </div>
+    </div>
+
+
+
+
+    <!-- ######################## -->
+    <!-- %%%%% Scripts %%%%% -->
+    <!-- ######################## -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
