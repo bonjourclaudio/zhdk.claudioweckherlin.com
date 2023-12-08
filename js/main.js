@@ -2,6 +2,10 @@ var scrollToHash = function (hash) {
     $(document.body).scrollTop($(hash).offset().top);
 }
 
+var navigateToProject = function (link) {
+    window.location.href = window.location.origin + "/projects/" + link;
+}
+
 
 // Invert Nav Color
 $(window).scroll(function (event) {

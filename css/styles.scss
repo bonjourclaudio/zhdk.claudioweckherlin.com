@@ -49,11 +49,25 @@ h2 {
 body {
     background-color: $accent;
     font-family: "Nimbus";
+
+    &.project-specific {
+        background-color: $primary;
+        color: $secondary;
+    }
 }
 
 .section {
     height: 100vh;
     width: 100vw;
+
+    &.project-overview {
+        min-height: 100vh;
+        height: auto;
+    }
+}
+
+.underline {
+    text-decoration: underline;
 }
 
 /* 
@@ -95,6 +109,10 @@ body {
     top: 0;
     position: sticky;
     position: -webkit-sticky;
+
+    &.project-specific {
+        color: $accent;
+    }
 
     @include devices(mobile) {
         font-size: 1rem;
@@ -242,6 +260,8 @@ body {
                 font-size: 4rem;
             }
         }
+
+        cursor: pointer;
     }
 
     .number {
@@ -305,13 +325,18 @@ body {
 .footer {
     height: 5vh;
     background-color: $primary;
+    color: $accent;
+
+    &.project-specific {
+        background-color: $accent;
+        color: $primary;
+    }
 
     @include devices(mobile) {
         height: 10vh;
     }
 
     &__container {
-        color: $accent;
         display: grid;
         width: 100%;
         height: 100%;
@@ -353,5 +378,59 @@ body {
 
     .footer-insta {
         grid-area: links;
+    }
+}
+
+// ############################
+// %%%%% PROJECT SPECIFIC %%%%%
+// ############################
+.project-overview {
+    .project-description {
+        height: 100vh;
+
+        display: grid;
+        grid-template-columns: 50% 25% 25%;
+
+        grid-template-areas: "desc text text";
+
+        font-size: 1.5rem;
+
+        border-top: 1px solid $secondary;
+
+        div {
+            margin-top: 2rem;
+        }
+
+        @include devices(mobile) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .desc {
+            grid-area: desc;
+        }
+
+        .text {
+            grid-area: text;
+        }
+    }
+}
+
+.xtract-project {
+    .project-demo {
+        width: 100vw;
+        height: 70vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        iframe {
+            width: 80vw;
+            height: 80vh;
+            border: 1px solid $accent;
+            padding: 2rem;
+        }
+
+        margin-bottom: 20vh;
     }
 }
