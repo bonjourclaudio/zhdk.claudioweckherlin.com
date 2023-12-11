@@ -400,7 +400,9 @@ body {
         display: grid;
         grid-template-columns: 50% 25% 25%;
 
-        grid-template-areas: "desc text text";
+        grid-template-areas:
+            "desc text text"
+            "second-title second-content second-content";
 
         font-size: 1.5rem;
 
@@ -422,10 +424,22 @@ body {
             grid-area: text;
             min-height: 40vh;
         }
-    }
-}
 
-.xtract-project {
+        .second-title {
+            grid-area: second-title;
+        }
+
+        .second-content {
+            grid-area: second-content;
+            height: 40vh;
+
+            .xtract-model {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
     .project-demo {
         width: 100vw;
         height: 70vh;
@@ -442,23 +456,15 @@ body {
 
         margin-bottom: 20vh;
     }
+}
 
-    .project-description {
-        grid-template-areas:
-            "desc text text"
-            "model-title model model";
+.dynamic-mirror-project {
+    .project-demo {
+        video {
+            width: 50vw;
 
-        .model-title {
-            grid-area: model-title;
-        }
-
-        .model {
-            grid-area: model;
-            height: 40vh;
-
-            .xtract-model {
-                width: 100%;
-                height: 100%;
+            @include devices(mobile) {
+                width: 90vw;
             }
         }
     }
