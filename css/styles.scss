@@ -359,12 +359,14 @@ body {
         div {
             @include devices(mobile) {
                 margin-bottom: 1vh;
+                margin-left: 1vw;
             }
         }
 
         @include devices(mobile) {
             display: flex;
-            justify-content: space-evenly;
+            flex-direction: column;
+            justify-content: space-around;
         }
     }
 
@@ -418,6 +420,10 @@ body {
 
         .desc {
             grid-area: desc;
+
+            @include devices(mobile) {
+                border-top: none;
+            }
         }
 
         .text {
@@ -427,6 +433,11 @@ body {
 
         .second-title {
             grid-area: second-title;
+
+            @include devices(mobile) {
+                padding-top: 10vh;
+                border-top: none;
+            }
         }
 
         .second-content {
