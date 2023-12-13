@@ -7,6 +7,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Fungis";
+    src: url("../assets/fonts/fungis/FUNGIS\ Bold.otf");
+    font-weight: bold;
+    font-style: normal;
+}
+
 @mixin devices($breakpoint) {
     @if $breakpoint == tablet {
         @media only screen and (max-width: 680px) {
@@ -408,7 +415,7 @@ body {
 
         font-size: 1.5rem;
 
-        div {
+        .border-top {
             border-top: 1px solid $secondary;
             padding-top: 2rem;
         }
@@ -442,7 +449,7 @@ body {
 
         .second-content {
             grid-area: second-content;
-            height: 40vh;
+            min-height: 40vh;
 
             .xtract-model {
                 width: 100%;
@@ -476,6 +483,96 @@ body {
 
             @include devices(mobile) {
                 width: 90vw;
+            }
+        }
+    }
+}
+
+.gsehundgseh-project {
+    .project-description {
+        .second-content {
+            div {
+                margin-bottom: 3vh;
+            }
+
+            .primary-font-container {
+                h2,
+                p {
+                    font-family: Fungis;
+                }
+            }
+
+            .secondary-font-container {
+                h2 {
+                }
+
+                p {
+                }
+            }
+
+            .color-container {
+                display: inline-flex;
+                width: 50%;
+                justify-content: space-between;
+
+                @include devices(mobile) {
+                    width: 100%;
+                }
+
+                div {
+                    width: 20vw;
+                    height: 20vw;
+                }
+
+                .primary-color {
+                    background-color: #fff616;
+                }
+                .secondary-color {
+                    background-color: black;
+                    border: 1px solid white;
+                }
+                .third-color {
+                    background-color: white;
+                }
+            }
+
+            .logo-container {
+                @include devices(mobile) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                }
+
+                div {
+                    width: 9vw;
+                    height: 9vw;
+
+                    @include devices(mobile) {
+                        width: 100vw;
+                        height: 40vh;
+                    }
+                }
+
+                .main-logo {
+                    background-image: url("../assets/gsehundgseh/logos/main_logo.svg");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                }
+
+                .second-logo {
+                    background-image: url("../assets/gsehundgseh/logos/second_logo.svg");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                }
+
+                .third-logo {
+                    background-image: url("../assets/gsehundgseh/logos/third_logo.svg");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                }
             }
         }
     }
