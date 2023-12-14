@@ -311,6 +311,21 @@ body {
                     width: 100%;
                 }
             }
+
+            .zhdk {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 50%;
+
+                    @include devices(mobile) {
+                        width: 90%;
+                    }
+                }
+            }
         }
     }
 
@@ -330,6 +345,9 @@ body {
     }
 
     .sketches {
+    }
+
+    .zhdk {
     }
 }
 
@@ -411,7 +429,8 @@ body {
 
         grid-template-areas:
             "desc text text"
-            "second-title second-content second-content";
+            "second-title second-content second-content"
+            "third-title third-content third-content";
 
         font-size: 1.5rem;
 
@@ -456,6 +475,19 @@ body {
                 height: 100%;
             }
         }
+
+        .third-title {
+            grid-area: third-title;
+
+            @include devices(mobile) {
+                padding-top: 10vh;
+                border-top: none;
+            }
+        }
+        .third-content {
+            grid-area: third-content;
+            min-height: 40vh;
+        }
     }
 
     .project-demo {
@@ -476,6 +508,9 @@ body {
     }
 }
 
+// ###########################
+// %%%%%% MIRROR %%%%%%%%
+// ###########################
 .dynamic-mirror-project {
     .project-demo {
         video {
@@ -488,6 +523,9 @@ body {
     }
 }
 
+// ###########################
+// %%%%%% GSEH+GSEH %%%%%%%%
+// ###########################
 .gsehundgseh-project {
     .project-description {
         .second-content {
@@ -520,8 +558,8 @@ body {
                 }
 
                 div {
-                    width: 20vw;
-                    height: 20vw;
+                    width: 9vh;
+                    height: 9vh;
                 }
 
                 .primary-color {
@@ -572,6 +610,144 @@ body {
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: contain;
+                }
+            }
+        }
+    }
+}
+
+// ###########################
+// %%%%%% COFFEE %%%%%%%%
+// ###########################
+
+.coffee-project {
+    .project-description {
+        .second-content {
+            min-height: 50vh;
+
+            .studio-setup {
+                @include devices(mobile) {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                img {
+                    width: 50%;
+
+                    @include devices(mobile) {
+                        width: 90vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ###########################
+// %%% GRAPHIC DESIGN %%%
+// ###########################
+
+.graphic-design-project {
+    .project-demo {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 80%;
+        }
+    }
+
+    .project-description {
+        .second-content {
+            min-height: 100vh;
+
+            .graphic-design-gallery {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+
+                div {
+                    width: 50%;
+                    img {
+                        width: 80%;
+                        height: auto;
+                    }
+
+                    margin-bottom: 5vh;
+                }
+            }
+        }
+    }
+}
+
+// ###########################
+// %%%%%% SKETCHES %%%%%%%%
+// ###########################
+
+.sketches-project {
+    .project-demo {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 80%;
+        }
+    }
+
+    .project-description {
+        .second-content {
+            min-height: 100vh;
+
+            .sketches-gallery {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+
+                div {
+                    width: 50%;
+                    img {
+                        width: 80%;
+                        height: auto;
+                    }
+
+                    margin-bottom: 5vh;
+                }
+            }
+        }
+    }
+}
+
+// ###########################
+// %%%%%% SKETCHES %%%%%%%%
+// ###########################
+.zhdk-project {
+    .project-demo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -2;
+
+        model-viewer {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .project-description {
+        .second-content {
+            min-height: 100vh;
+
+            .print-container {
+                width: 50%;
+
+                img {
+                    width: 80%;
                 }
             }
         }
