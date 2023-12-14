@@ -322,10 +322,6 @@ body {
                 align-items: center;
                 justify-content: center;
 
-                @include devices(mobile) {
-                    align-items: start;
-                }
-
                 img {
                     width: 50%;
 
@@ -421,6 +417,65 @@ body {
 
     .footer-insta {
         grid-area: links;
+    }
+}
+
+/* 
+    ####################
+    About
+*/
+
+.about {
+    display: flex;
+    min-height: 100vh;
+    align-items: flex-end;
+
+    .about-container {
+        font-size: 1.5rem;
+        height: 70vh;
+        display: grid;
+        grid-template-columns: 50% 25% 25%;
+        grid-template-areas:
+            "title content content"
+            ". image image ";
+
+        @include devices(mobile) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .about-title {
+            grid-area: title;
+            border-top: 1px solid $secondary;
+            padding-top: 2rem;
+
+            @include devices(mobile) {
+                border: none;
+            }
+        }
+        .about-content {
+            grid-area: content;
+            border-top: 1px solid $secondary;
+            padding-top: 2rem;
+
+            @include devices(mobile) {
+                padding-bottom: 10vh;
+            }
+        }
+
+        .about-img {
+            grid-area: image;
+            border-top: 1px solid $secondary;
+            padding-top: 2rem;
+
+            img {
+                width: 10vw;
+
+                @include devices(mobile) {
+                    width: 30vw;
+                }
+            }
+        }
     }
 }
 
@@ -528,7 +583,10 @@ body {
                 padding-bottom: 5vh;
 
                 display: flex;
-                justify-content: center;
+
+                @include devices(mobile) {
+                    justify-content: center;
+                }
             }
 
             .xtract-sketch {
