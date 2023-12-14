@@ -235,13 +235,17 @@ body {
         position: sticky;
         position: -webkit-sticky;
         top: 0;
-        min-height: 100vh;
+        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
         z-index: 1;
         background-color: $primary;
         color: $secondary;
+
+        @include devices(mobile) {
+            min-height: 100vh;
+        }
     }
 
     .project-content {
@@ -511,6 +515,52 @@ body {
 // ###########################
 // %%%%%% MIRROR %%%%%%%%
 // ###########################
+.xtract-project {
+    .project-description {
+        .third-content {
+            min-height: 100vh;
+
+            div {
+                padding-bottom: 5vh;
+
+                display: flex;
+                justify-content: center;
+            }
+
+            .xtract-sketch {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+
+                img {
+                    width: 70%;
+
+                    @include devices(mobile) {
+                        width: 90%;
+                    }
+                }
+            }
+
+            .xtract-drawing {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+
+                img {
+                    width: 70%;
+
+                    @include devices(mobile) {
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ###########################
+// %%%%%% MIRROR %%%%%%%%
+// ###########################
 .dynamic-mirror-project {
     .project-demo {
         video {
@@ -669,7 +719,8 @@ body {
 
                 div {
                     width: 50%;
-                    img {
+                    img,
+                    video {
                         width: 80%;
                         height: auto;
                     }
