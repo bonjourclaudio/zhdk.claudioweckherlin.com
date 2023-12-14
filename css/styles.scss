@@ -322,6 +322,10 @@ body {
                 align-items: center;
                 justify-content: center;
 
+                @include devices(mobile) {
+                    justify-content: baseline;
+                }
+
                 img {
                     width: 50%;
 
