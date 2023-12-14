@@ -738,10 +738,15 @@ body {
             min-height: 50vh;
 
             .studio-setup {
+                display: flex;
+                justify-content: space-between;
+                width: 80%;
+
                 @include devices(mobile) {
-                    display: flex;
+                    flex-direction: column;
                     justify-content: center;
                     align-items: center;
+                    width: 100%;
                 }
 
                 img {
