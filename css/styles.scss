@@ -323,7 +323,7 @@ body {
                 justify-content: center;
 
                 @include devices(mobile) {
-                    justify-content: baseline;
+                    justify-content: start;
                 }
 
                 img {
