@@ -593,7 +593,7 @@ body {
 .hungry-project {
     .project-demo {
         iframe {
-            width: 35vw;
+            width: 25vw;
             height: 75vh;
 
             @include devices(mobile) {
