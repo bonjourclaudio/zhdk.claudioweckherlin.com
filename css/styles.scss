@@ -635,6 +635,9 @@ body {
 // ###########################
 .xtract-project {
     .project-description {
+        .text {
+            min-height: 70vh;
+        }
         .second-content {
             height: 50vh;
         }
@@ -697,8 +700,12 @@ body {
     }
 
     .project-description {
+        .text {
+            min-height: 60vh;
+        }
+
         .second-content {
-            min-height: 50vh;
+            min-height: 70vh;
             .circuit {
                 height: 30vh;
 
@@ -809,13 +816,21 @@ body {
 
 .coffee-project {
     .project-description {
-        .second-content {
+        .text {
             min-height: 70vh;
+        }
+
+        .second-content {
+            min-height: 50vh;
 
             .studio-setup {
                 display: flex;
                 justify-content: space-between;
-                width: 80%;
+                width: 90%;
+
+                div {
+                    padding-right: 3vw;
+                }
 
                 @include devices(mobile) {
                     flex-direction: column;
@@ -825,7 +840,7 @@ body {
                 }
 
                 img {
-                    width: 50%;
+                    width: 40%;
 
                     @include devices(mobile) {
                         width: 90vw;
