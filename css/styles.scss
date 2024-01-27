@@ -180,11 +180,23 @@ body {
 
         &__heading {
             position: relative;
-            display: flex;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
 
             h1 {
-                font-style: italic;
                 text-transform: uppercase;
+            }
+
+            div {
+                display: flex;
+                width: 100%;
+
+                justify-content: space-between;
+
+                span {
+                    font-style: italic;
+                }
             }
         }
 
@@ -305,6 +317,7 @@ body {
 
             .media-elem {
                 img {
+                    cursor: pointer;
                     width: 100%;
                 }
             }
@@ -951,11 +964,13 @@ body {
         .second-content {
             min-height: 100vh;
 
-            display: flex;
-            justify-content: center;
-
             .print-container {
                 width: 90%;
+
+                display: flex;
+                justify-content: center;
+
+                margin-top: 5vh;
 
                 embed {
                     width: 100%;
