@@ -728,6 +728,10 @@ body {
                 }
             }
         }
+
+        .third-content {
+            min-height: 60vh;
+        }
     }
 }
 
@@ -736,7 +740,11 @@ body {
 // ###########################
 .gsehundgseh-project {
     .project-description {
+        .text {
+            min-height: 60vh;
+        }
         .second-content {
+            min-height: 70vh;
             div {
                 margin-bottom: 3vh;
             }
@@ -821,6 +829,10 @@ body {
                 }
             }
         }
+
+        .third-content {
+            min-height: 100vh;
+        }
     }
 }
 
@@ -864,7 +876,7 @@ body {
         }
 
         .third-content {
-            min-height: 50vh;
+            min-height: 60vh;
         }
     }
 }
@@ -967,22 +979,36 @@ body {
 
     .project-description {
         .second-content {
-            min-height: 100vh;
+            height: 210vh;
 
             .print-container {
-                width: 90%;
+                width: 100%;
+                height: 100%;
 
                 display: flex;
                 justify-content: center;
 
-                margin-top: 5vh;
-
-                embed {
+                .book-container {
+                    display: inline-flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
                     width: 100%;
-                    height: 80vh;
+                    flex-direction: row;
+                    align-content: flex-start;
 
-                    @include devices(mobile) {
-                        height: 100vh;
+                    .book-page {
+                        width: 50%;
+                        height: 30vh;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        img {
+                            width: 70%;
+                            height: auto;
+
+                            object-fit: cover;
+                        }
                     }
                 }
             }
