@@ -1030,6 +1030,11 @@ body {
 
         .fourth-content {
             height: 80vh;
+
+            @include devices(mobile) {
+                height: 150vh;
+            }
+
             .graphic-content {
                 display: flex;
                 flex-wrap: wrap;
