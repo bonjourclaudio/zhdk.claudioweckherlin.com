@@ -469,6 +469,7 @@ body {
         @include devices(mobile) {
             display: flex;
             flex-direction: column;
+            height: 100vh;
         }
 
         .about-title {
