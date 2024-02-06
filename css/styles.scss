@@ -520,8 +520,8 @@ body {
         grid-template-areas:
             "desc text text"
             "second-title second-content second-content"
-            "third-title third-content third-content";
-
+            "third-title third-content third-content"
+            "fourth-title fourth-content fourth-content";
         font-size: 1.5rem;
 
         .border-top {
@@ -579,6 +579,19 @@ body {
         }
         .third-content {
             grid-area: third-content;
+            min-height: 40vh;
+        }
+
+        .fourth-title {
+            grid-area: fourth-title;
+
+            @include devices(mobile) {
+                padding-top: 10vh;
+                border-top: none;
+            }
+        }
+        .fourth-content {
+            grid-area: fourth-content;
             min-height: 40vh;
         }
     }
@@ -1009,6 +1022,38 @@ body {
 
                             object-fit: cover;
                         }
+                    }
+                }
+            }
+        }
+
+        .fourth-content {
+            height: 80vh;
+            .graphic-content {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+
+                .type-sketch {
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+
+                    img {
+                        width: auto;
+                        height: 25vh;
+                    }
+                }
+
+                .type-container {
+                    height: 40vh;
+                    width: 100%;
+
+                    .type-model {
+                        width: 100%;
+                        height: 100%;
                     }
                 }
             }
