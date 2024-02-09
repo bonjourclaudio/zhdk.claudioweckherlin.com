@@ -741,7 +741,7 @@ body {
         }
 
         .second-content {
-            min-height: 100vh;
+            min-height: 150vh;
             .circuit {
                 height: 38vh;
 
@@ -753,6 +753,14 @@ body {
 
         .third-content {
             min-height: 60vh;
+
+            img {
+                width: 50vw;
+
+                @include devices(mobile) {
+                    width: 90vw;
+                }
+            }
         }
     }
 }
