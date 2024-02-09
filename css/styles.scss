@@ -719,7 +719,8 @@ body {
 .dynamic-mirror-project {
     .project-demo {
         video {
-            width: 50vw;
+            border: 1px solid $accent;
+            width: 80vw;
 
             @include devices(mobile) {
                 width: 90vw;
@@ -728,14 +729,21 @@ body {
     }
 
     .project-description {
+        video {
+            width: 45vw;
+
+            @include devices(mobile) {
+                width: 90vw;
+            }
+        }
         .text {
             min-height: 60vh;
         }
 
         .second-content {
-            min-height: 70vh;
+            min-height: 100vh;
             .circuit {
-                height: 30vh;
+                height: 38vh;
 
                 img {
                     height: 100%;
