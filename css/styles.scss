@@ -755,7 +755,7 @@ body {
             min-height: 60vh;
 
             img {
-                width: 50vw;
+                width: 40vw;
 
                 @include devices(mobile) {
                     width: 90vw;
