@@ -1041,7 +1041,12 @@ body {
 
     .project-description {
         .second-content {
-            height: 80vh;
+            height: 90vh;
+
+            @include devices(mobile) {
+                height: 100vh;
+            }
+
             .circuit {
                 height: 30vh;
 
