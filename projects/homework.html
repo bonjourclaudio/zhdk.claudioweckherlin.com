@@ -60,15 +60,61 @@
             <div class="project-description">
                 <div class="desc border-top">Project Description</div>
                 <div class="text border-top">
-                    Herangehensweise, Ideen verforfen und finale Idee, Planung
+                    This year's term was "Im Moment". I knew that I wanted to create something physical - an unusual
+                    interface of some sort that visualizes live time data. While brainstorming some ideas, I thought
+                    about the word "Moment" and how I could incorporate it into a physical object. <br /><br />
+
+                    "Moment" implies the aspect of time in which something takes place, something immediate. Since I
+                    wanted the object to interact with its user, I considered what data could be read that would always
+                    be changing and have a direct output. The human's pulse came to my mind. It's constantly changing
+                    and immediate.<br /><br />
+
+                    After more brainstorming and sketching, I came up with the idea of crafting a box that visualizes
+                    one's pulse using light and sound. You have to hold the box in order for it to start measuring,
+                    requiring you to be "in the moment." As soon as you let go of the box, it stops.
                 </div>
                 <div class="second-title border-top">Electronics & Code</div>
                 <div class="second-content border-top">
-                    TBD
+                    To bring my idea to life, I utilized my Arduino, a heart rate sensor (MAX30100), a buzzer for sound
+                    output, and a matrix LED (WS2812) which illuminates in sync with the measured pulse frequency:
+
+                    <div class="circuit">
+                        <br />
+                        <img src="../assets/homework/im_moment_circuit.png" alt="">
+
+                    </div>
+
+                    <br />
+                    <br />
+                    I tested each component individually before integrating the code. There were a few problems that
+                    arose, since I was using the newest Arduino chip which wasn't yet supported by the LED library that
+                    I was using. After lots of debugging and testing, I finally found a fork of the library, which made
+                    it possible to communicate with the LED Matrix over the I2C protocol.
                 </div>
                 <div class="third-title border-top">Crafting</div>
                 <div class="third-content border-top">
-                    TBD
+
+                    I crafted the box itself using six 15cm acrylic glass squares. To diffuse the light, I applied a
+                    spray that creates a milk glass effect. Here you can see the process.
+
+                    <div class="box-process">
+
+                        <div>
+                            <img src="../assets/homework/1.jpeg" alt="" srcset="">
+                        </div>
+                        <div>
+                            <img src="../assets/homework/2.jpeg" alt="" srcset="">
+                        </div>
+                        <div>
+                            <img src="../assets/homework/3.jpeg" alt="" srcset="">
+                        </div>
+                        <div>
+                            <img src="../assets/homework/4.jpeg" alt="" srcset="">
+                        </div>
+                        <div>
+                            <img src="../assets/homework/5.jpeg" alt="" srcset="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

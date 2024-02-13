@@ -497,7 +497,7 @@ body {
             padding-top: 2rem;
 
             img {
-                width: 10vw;
+                width: 12vw;
 
                 @include devices(mobile) {
                     width: 30vw;
@@ -980,6 +980,56 @@ body {
                     }
 
                     margin-bottom: 5vh;
+                }
+            }
+        }
+    }
+}
+
+// ###########################
+// %%%%%% HOMEWORK %%%%%%%%
+// ###########################
+
+.homework-project {
+    .project-demo {
+    }
+
+    .project-description {
+        .second-content {
+            height: 80vh;
+            .circuit {
+                height: 30vh;
+
+                img {
+                    height: 100%;
+                }
+            }
+        }
+
+        .third-content {
+            height: 120vh;
+
+            @include devices(mobile) {
+                height: 200vh;
+            }
+            .box-process {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                div {
+                    padding: 1rem;
+                    width: 45%;
+                    height: 30vh;
+
+                    @include devices(mobile) {
+                        width: 100%;
+                    }
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
                 }
             }
         }
