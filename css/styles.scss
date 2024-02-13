@@ -381,8 +381,8 @@ body {
                     width: 40%;
 
                     @include devices(mobile) {
-                        width: 90vw !important;
-                        height: 40vh;
+                        width: 850vw !important;
+                        height: 35vh;
 
                         object-fit: cover;
                     }
