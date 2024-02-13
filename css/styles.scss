@@ -381,7 +381,8 @@ body {
                     width: 40%;
 
                     @include devices(mobile) {
-                        width: 70%;
+                        width: auto;
+                        height: 70%;
                     }
                 }
             }
