@@ -347,7 +347,22 @@ body {
                 justify-content: center;
 
                 img {
-                    width: 50%;
+                    width: 60%;
+
+                    @include devices(mobile) {
+                        width: 90%;
+                    }
+                }
+            }
+
+            .homework {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 40%;
 
                     @include devices(mobile) {
                         width: 70%;
@@ -992,6 +1007,17 @@ body {
 
 .homework-project {
     .project-demo {
+        video {
+            width: 25vw;
+            height: 75vh;
+            border: 1px solid $accent;
+            padding: 2rem;
+
+            @include devices(mobile) {
+                width: 95vw;
+                height: 90vh;
+            }
+        }
     }
 
     .project-description {
@@ -1007,10 +1033,10 @@ body {
         }
 
         .third-content {
-            height: 120vh;
+            height: 150vh;
 
             @include devices(mobile) {
-                height: 200vh;
+                height: 300vh;
             }
             .box-process {
                 display: flex;
