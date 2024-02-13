@@ -381,8 +381,10 @@ body {
                     width: 40%;
 
                     @include devices(mobile) {
-                        width: auto;
-                        height: 70%;
+                        width: 50vw;
+                        height: 40vh;
+
+                        object-fit: contain;
                     }
                 }
             }
